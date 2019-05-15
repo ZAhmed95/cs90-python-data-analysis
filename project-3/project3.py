@@ -125,11 +125,6 @@ class Classifier:
       # we have the output_label variable that will eventually contain the final result
       output_label = self.labels[0] # arbitrary starting point
       # TODO: change output_label to the label with the highest score
-      max_score = scores[output_label]
-      for label in self.labels[1:]:
-        if scores[label] > max_score:
-          output_label = label
-          max_score = scores[label]
       
       # after changing output_label to the correct value, return it
       return output_label
